@@ -4,7 +4,7 @@ import NavbarComponent from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NavbarComponent />
       <ButtonComponent
         text={"Click me!"}
