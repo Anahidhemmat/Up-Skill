@@ -6,26 +6,25 @@ export default {
   component: ButtonComponent,
 };
 
-export const ContainedPrimary = ({ children }) => (
-  <ButtonComponent variant="contained" color="primary">
-    {children}
-  </ButtonComponent>
-);
+const Template = (args) => <ButtonComponent {...args} />;
 
-export const ContainedSecondary = ({ children }) => (
-  <ButtonComponent variant="contained" color="secondary">
-    {children}
-  </ButtonComponent>
-);
+export const Contained = Template.bind({});
+Contained.args = {
+  variant: "contained",
+  color: "warning",
+  label: "submit",
+};
 
-export const ContainedError = ({ children }) => (
-  <ButtonComponent variant="contained" color="error">
-    {children}
-  </ButtonComponent>
-);
+export const Outlined = Template.bind({});
+Outlined.args = {
+  variant: "outlined",
+  color: "error",
+  label: "submit",
+};
 
-export const ContainedWarning = ({ children }) => (
-  <ButtonComponent variant="contained" color="warning">
-    {children}
-  </ButtonComponent>
-);
+export const Text = Template.bind({});
+Text.args = {
+  variant: "text",
+  color: "success",
+  label: "submit",
+};

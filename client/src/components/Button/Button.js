@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 
-const ButtonComponent = ({ variant, type, color, children }) => {
+const ButtonComponent = ({ variant, type, color, label }) => {
   return (
     <div>
       <Button type={type} variant={variant} color={color}>
-        {children}
+        {label}
       </Button>
     </div>
   );
