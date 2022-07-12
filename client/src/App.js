@@ -5,7 +5,7 @@ import {
   ContainedPrimary,
 } from "./components/Button/Button.stories";
 import CardComponent from "./components/Card";
-import TextFieldComponent from "./components/Input";
+import TextFieldComponent from "./components/Input/Input";
 import ListComponent from "./components/List";
 import ListItemComponent from "./components/ListItem";
 import NavbarComponent from "./components/Navbar";
