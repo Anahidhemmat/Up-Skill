@@ -2,6 +2,8 @@ import "./App.css";
 import ButtonComponent from "./components/Button";
 import CardComponent from "./components/Card";
 import TextFieldComponent from "./components/Input";
+import ListComponent from "./components/List";
+import ListItemComponent from "./components/ListItem";
 import NavbarComponent from "./components/Navbar";
 
 function App() {
@@ -20,6 +22,10 @@ To ignore, add // eslint-disable-next-line to the line before."
         src="https://source.unsplash.com/random"
         alt="unsplash img"
       />
+      <ListComponent width="400px" bgcolor="#efefef">
+        <ListItemComponent primary="List Item" secondary="secondary text" />
+        <ListItemComponent primary="second Item" secondary="secondary text" />
+      </ListComponent>
       <ButtonComponent
         text="Click me!"
         type="button"
