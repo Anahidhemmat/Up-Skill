@@ -4,6 +4,8 @@
 
 ---
 
+## Some Examples
+
 ### `Tyography`
 
 Typograghy basically deals with the style and appearance of text on your website.
@@ -28,3 +30,10 @@ There are 3 different variation of this component:
 - text
 - contained
 - outlined
+
+---
+
+#### `Resourses`
+
+1. [Documention](https://mui.com/ "visit website")
+2. [Tutorial](https://www.youtube.com/watch?v=BHEPVdfBAqE&list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO "show playlist")
