@@ -57,7 +57,21 @@ npm run storybook
   You have to add **title** and **component** in **export** object.
   Then you can add different variant for your button as component.
 
-```JSX
+```Javascript
 export const Primary = () =>
 <Button variant="primary">Primary<Button>
+```
+
+- Stories can be nested:
+
+```Javascript
+export default {
+  title: "form/Button"
+}
+```
+
+- Story names are changable:
+
+```
+
 ```
