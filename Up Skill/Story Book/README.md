@@ -58,5 +58,6 @@ npm run storybook
   Then you can add different variant for your button as component.
 
 ```JSX
-export const Primary = () => <Button variant="primary">Primary<Button>
+export const Primary = () =>
+<Button variant="primary">Primary<Button>
 ```
