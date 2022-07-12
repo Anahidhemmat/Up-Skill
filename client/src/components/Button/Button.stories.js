@@ -6,8 +6,26 @@ export default {
   component: ButtonComponent,
 };
 
-export const ContainedPrimary = () => (
-  <ButtonComponent variant="contained" color="#90caf9">
-    Contained Primary
+export const ContainedPrimary = ({ children }) => (
+  <ButtonComponent variant="contained" color="primary">
+    {children}
+  </ButtonComponent>
+);
+
+export const ContainedSecondary = ({ children }) => (
+  <ButtonComponent variant="contained" color="secondary">
+    {children}
+  </ButtonComponent>
+);
+
+export const ContainedError = ({ children }) => (
+  <ButtonComponent variant="contained" color="error">
+    {children}
+  </ButtonComponent>
+);
+
+export const ContainedWarning = ({ children }) => (
+  <ButtonComponent variant="contained" color="warning">
+    {children}
   </ButtonComponent>
 );

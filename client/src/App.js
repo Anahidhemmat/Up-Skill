@@ -1,5 +1,9 @@
 import "./App.css";
 import ButtonComponent from "./components/Button/Button";
+import {
+  ContainedError,
+  ContainedPrimary,
+} from "./components/Button/Button.stories";
 import CardComponent from "./components/Card";
 import TextFieldComponent from "./components/Input";
 import ListComponent from "./components/List";
@@ -26,12 +30,6 @@ To ignore, add // eslint-disable-next-line to the line before."
         <ListItemComponent primary="List Item" secondary="secondary text" />
         <ListItemComponent primary="second Item" secondary="secondary text" />
       </ListComponent>
-      <ButtonComponent
-        text="Click me!"
-        type="button"
-        variant="outlined"
-        color="secondary"
-      />
     </div>
   );
 }
