@@ -1,14 +1,12 @@
 import "./App.css";
 import ButtonComponent from "./components/Button/Button";
-import {
-  ContainedError,
-  ContainedPrimary,
-} from "./components/Button/Button.stories";
 import CardComponent from "./components/Card";
 import TextFieldComponent from "./components/Input/Input";
 import ListComponent from "./components/List";
 import ListItemComponent from "./components/ListItem";
 import NavbarComponent from "./components/Navbar";
+import { Contained, Outlined, Text } from "./components/Button/Button.stories";
+import { OutlinedInput } from "./components/Input/Input.stories";
 
 function App() {
   return (
@@ -30,6 +28,8 @@ To ignore, add // eslint-disable-next-line to the line before."
         <ListItemComponent primary="List Item" secondary="secondary text" />
         <ListItemComponent primary="second Item" secondary="secondary text" />
       </ListComponent>
+      <Contained>Story</Contained>
+      <OutlinedInput label="name" />
     </div>
   );
 }

@@ -6,6 +6,23 @@ export default {
   component: TextFieldComponent,
 };
 
-const SmallInput = () => <TextFieldComponent size="small" />;
-const MediumInput = () => <TextFieldComponent size="medium" />;
-const LargeInput = () => <TextFieldComponent size="large" />;
+const Template = (args) => <TextFieldComponent {...args} />;
+
+export const OutlinedInput = Template.bind({});
+OutlinedInput.args = {
+  variant: "outlined",
+};
+
+export const FilledInput = Template.bind({});
+FilledInput.args = {
+  variant: "filled",
+};
+
+export const StandardInput = Template.bind({});
+StandardInput.args = {
+  variant: "standard",
+};
+
+// export const SmallInput = () => <TextFieldComponent size="small" />;
+// export const MediumInput = () => <TextFieldComponent size="medium" />;
+// export const LargeInput = () => <TextFieldComponent size="large" />;
