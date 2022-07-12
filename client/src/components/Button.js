@@ -12,11 +12,11 @@ const ButtonComponent = ({ text, variant, type, color }) => {
   );
 };
 
-// ButtonComponent.PropTypes = {
-//   text: PropTypes.string,
-//   variant: PropTypes.string,
-//   type: PropTypes.string,
-//   color: PropTypes.string,
-// };
+ButtonComponent.propTypes = {
+  text: PropTypes.string,
+  variant: PropTypes.string,
+  type: PropTypes.string,
+  color: PropTypes.string,
+};
 
 export default ButtonComponent;
