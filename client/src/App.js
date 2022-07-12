@@ -4,7 +4,7 @@ import CardComponent from "./components/Card";
 import TextFieldComponent from "./components/Input/Input";
 import ListComponent from "./components/List";
 import ListItemComponent from "./components/ListItem";
-import NavbarComponent from "./components/Navbar";
+import NavbarComponent from "./components/Navbar/Navbar";
 import { Contained, Outlined, Text } from "./components/Button/Button.stories";
 import { OutlinedInput } from "./components/Input/Input.stories";
 
