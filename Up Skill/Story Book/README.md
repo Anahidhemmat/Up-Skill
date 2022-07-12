@@ -57,7 +57,7 @@ npm run storybook
   You have to add **title** and **component** in **export** object.
   Then you can add different variant for your button as component.
 
-```Javascript
+```JSX
 export const Primary = () =>
 <Button variant="primary">Primary<Button>
 ```
@@ -72,6 +72,9 @@ export default {
 
 - Story names are changable:
 
+```Javascript
+ContainedPrimary.storyName = 'contained primary btn'
 ```
 
-```
+- You Can sort stories.
+  - go to docs => sorting stories.
