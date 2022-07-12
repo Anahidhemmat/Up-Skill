@@ -1,5 +1,5 @@
 import "./App.css";
-import ButtonComponent from "./components/Button";
+import ButtonComponent from "./components/Button/Button";
 import CardComponent from "./components/Card";
 import TextFieldComponent from "./components/Input";
 import ListComponent from "./components/List";
