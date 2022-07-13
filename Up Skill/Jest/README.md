@@ -170,3 +170,31 @@ test('the data is peanut butter', () => {
 ```
 
 ---
+
+#### `Async/Await`
+
+- To write an **async** test, use the async keyword in front of the function passed to test.
+
+```Javascript
+test('the data is peanut butter', async() => {
+    const data = await fetchData();
+    expect(data).toBe("peanut butter")
+})
+```
+
+- You can combine async and await with .resolves or .rejects.
+
+```Javascript
+test("data is peanut butter", async() => {
+    await expect(fetchData()).resolves.toBe('peanut butter');
+})
+```
+
+- If you expect a promise to be rejected, use the **.catch** method. Make sure to add **expect.assertions** to verify that a certain number of assertions are called. Otherwise, a fulfilled promise would not fail the test.
+
+```Javascript
+test('the fetch fails with an error', async() => {
+    expect.assertions(1);
+    return fetchData().catch(e => expect(e).toMatch('error'));
+})
+```
