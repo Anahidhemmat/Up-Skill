@@ -1,12 +1,12 @@
 import React from "react";
-import NavItem from "./NavItem";
+import NavItem from "../NavItem";
 import { AppBar, Toolbar, IconButton, Typography, Stack } from "@mui/material";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ bgcolor }) => {
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" bgcolor={bgcolor}>
         <Toolbar>
           <IconButton
             size="large"
