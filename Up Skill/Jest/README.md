@@ -198,3 +198,39 @@ test('the fetch fails with an error', async() => {
     return fetchData().catch(e => expect(e).toMatch('error'));
 })
 ```
+
+---
+
+### `Setup and Teardown`
+
+- Often while writing tests you have some setup work that needs to happen before tests run, and you have some finishing work that needs to happen after tests run.
+  ***
+
+#### `Repeating Setup`
+
+- If you have some work you need to do repeatedly for many tests, you can use **beforeEach** and **afterEach** hooks.
+
+---
+
+#### `One-Time Setup`
+
+- In some cases, you only need to do setup once, at the beginning of a file. Jest provides **beforeAll** and **afterAll** hooks to handle this situation.
+
+---
+
+#### `Scoping`
+
+- By default, the beforeAll and afterAll blocks apply to every test in a file. You can also group tests together using a **describe** block.
+- When they are inside a describe block, the beforeAll and afterAll blocks only apply to the tests within that describe block.
+
+---
+
+#### `Order of Execution`
+
+- Jest executes all describe handlers in a test file before it executes any of the actual tests.
+
+---
+
+#### `Points`
+
+- To run only one test with Jest, temporarily change that test command to a **test.only**
