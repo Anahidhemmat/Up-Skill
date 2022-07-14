@@ -18,19 +18,16 @@ export const Contained = Template.bind({});
 Contained.args = {
   variant: "contained",
   color: "warning",
-  label: "submit",
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
   variant: "outlined",
   color: "error",
-  label: "submit",
 };
 
 export const Text = Template.bind({});
 Text.args = {
   variant: "text",
-  color: "success",
-  label: "submit",
+  color: "primary",
 };
