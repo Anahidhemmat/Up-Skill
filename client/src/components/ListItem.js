@@ -10,8 +10,9 @@ import {
   Divider,
 } from "@mui/material";
 import FolderIcon from "@mui/icons-material/Folder";
+import PropTypes from "prop-types";
 
-const ListItemComponent = ({ primary, secondary }) => {
+const ListItemComponent = ({ primary, secondary, color }) => {
   return (
     <Stack>
       <ListItem>
@@ -22,7 +23,7 @@ const ListItemComponent = ({ primary, secondary }) => {
             </Avatar>
           </ListItemAvatar>
         </ListItemIcon>
-        <ListItemText primary={primary} secondary={secondary} />
+        <ListItemText primary={primary} secondary={secondary} color={color} />
       </ListItem>
       <Divider />
     </Stack>

@@ -1,12 +1,13 @@
 import React from "react";
-import NavItem from "../NavItem";
+import NavItem from "../NavItem/NavItem";
 import { AppBar, Toolbar, IconButton, Typography, Stack } from "@mui/material";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
+import PropTypes from "prop-types";
 
-const NavbarComponent = ({ bgcolor }) => {
+const NavbarComponent = ({ color = "inherit", logo = "POKEMON APP" }) => {
   return (
     <div>
-      <AppBar position="static" bgcolor={bgcolor}>
+      <AppBar position="static" color={color}>
         <Toolbar>
           <IconButton
             size="large"
@@ -17,18 +18,25 @@ const NavbarComponent = ({ bgcolor }) => {
             <CatchingPokemonIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            POKEMON APP
+            {logo}
           </Typography>
-          <Stack direction="row" spacing={2}>
-            <NavItem name="Home" href="#" color="inherit" variant="text" />
-            <NavItem name="About" href="#" color="inherit" variant="text" />
-            <NavItem name="Pricing" href="#" color="inherit" variant="text" />
-            <NavItem name="Login" href="#" color="inherit" variant="text" />
-          </Stack>
+          <Stack direction="row" spacing={2}></Stack>
         </Toolbar>
       </AppBar>
     </div>
   );
+};
+
+NavbarComponent.propTypes = {
+  color: PropTypes.oneOf([
+    "inherit",
+    "primary",
+    "secondary",
+    "success",
+    "error",
+    "info",
+    "warning",
+  ]),
 };
 
 export default NavbarComponent;
