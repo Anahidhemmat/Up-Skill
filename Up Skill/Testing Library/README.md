@@ -25,6 +25,8 @@ npm install --save-dev @testing-library/react
 - Integration tests: to test how are components working together
 - End to End test: to test from the beginning to the very end
 
+---
+
 ### `Writing Tests`
 
 - In real world applications :
@@ -82,3 +84,34 @@ test("renders learn react link", () => {
     expect(linkElement).toBeInTheDocument();
 });
 ```
+
+---
+
+### `Queries`
+
+|         | getBy  | findBy | queryBy | getAllBy | findAllBy | queryAllBy |
+| ------- | ------ | ------ | ------- | -------- | --------- | ---------- |
+| Nomatch | error  | erroe  | null    | error    | error     | array      |
+| 1match  | return | return | return  | array    | array     | array      |
+| 1+match | error  | error  | error   | array    | array     | array      |
+| Await   | no     | yes    | no      | no       | yes       | no         |
+
+---
+
+#### `Queries priority`
+
+1. Accessible by everyone:
+
+- getByRole
+- getByLabelText
+- getByPlaceholderText
+- getByText
+
+  2.Semanti queries
+
+- getByAltText
+- getByTitle
+
+  3.Test ID
+
+- getByTestId
