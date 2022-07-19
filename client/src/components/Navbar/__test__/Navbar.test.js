@@ -8,14 +8,16 @@ it("should render banner", () => {
   expect(navElement).toBeInTheDocument();
 });
 
-it("should render same color passed into color prop", () => {
-  render(<NavbarComponent />);
-  const navElement = screen.getByRole("banner");
-  expect(navElement).toBeInTheDocument();
-});
+describe("should render props", () => {
+  it("should render same color passed into color prop", async () => {
+    render(<NavbarComponent />);
+    const navElement = screen.getByRole("banner");
+    expect(navElement).toBeInTheDocument();
+  });
 
-it("should render same logo passed into logo prop", () => {
-  render(<NavbarComponent />);
-  const navElement = screen.getByRole("banner");
-  expect(navElement).toBeInTheDocument();
+  it("should render same logo passed into logo prop", async () => {
+    render(<NavbarComponent logo={""} />);
+    const navElement = screen.getByRole("banner");
+    expect(navElement).toBeInTheDocument();
+  });
 });

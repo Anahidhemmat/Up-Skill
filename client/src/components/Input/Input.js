@@ -1,7 +1,14 @@
 import React from "react";
 import { TextField, Stack } from "@mui/material";
 
-const TextFieldComponent = ({ label, variant, size, type, placeholder }) => {
+const TextFieldComponent = ({
+  label,
+  variant,
+  size,
+  type,
+  placeholder,
+  onChange,
+}) => {
   return (
     <TextField
       label={label}
@@ -9,6 +16,7 @@ const TextFieldComponent = ({ label, variant, size, type, placeholder }) => {
       size={size}
       type={type}
       placeholder={placeholder}
+      onChange={onChange}
     />
   );
 };
