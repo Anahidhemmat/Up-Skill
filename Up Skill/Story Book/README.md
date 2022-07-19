@@ -81,17 +81,3 @@ ContainedPrimary.storyName = 'contained primary btn'
   - go to docs => sorting stories.
 
   ***
-
-  #### `Points`
-
-  - Make clone for your story :
-
-  ```Javascript
-  const Template = args => <YourComponent {...args}/>
-
-  export const YourStory = Template.bind({});
-
-  YourStory.args = {
-   ( your args)
-  }
-  ```
