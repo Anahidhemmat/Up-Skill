@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, List } from "@mui/material";
 import { bgcolor } from "@mui/system";
-import ListItemComponent from "../ListItem/ListItem";
+import ListItemComponent from "./ListItem";
 
 const ListComponent = ({ width, children, bgcolor }) => {
   return (

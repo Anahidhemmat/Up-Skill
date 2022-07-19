@@ -3,7 +3,7 @@ import ButtonComponent from "./components/Button/Button";
 import CardComponent from "./components/Card/Card";
 import TextFieldComponent from "./components/Input/Input";
 import ListComponent from "./components/List";
-import ListItemComponent from "./components/ListItem";
+import ListItemComponent from "./components/ListItem/ListItem";
 import NavbarComponent from "./components/Navbar/Navbar";
 import { Contained, Outlined, Text } from "./components/Button/Button.stories";
 import { OutlinedInput } from "./components/Input/Input.stories";
