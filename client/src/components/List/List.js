@@ -3,10 +3,10 @@ import { Box, List } from "@mui/material";
 import { bgcolor } from "@mui/system";
 import ListItemComponent from "./ListItem";
 
-const ListComponent = (props) => {
+const ListComponent = ({ width, children, bgcolor }) => {
   return (
-    <Box width={props.width} bgcolor={props.bgcolor}>
-      <List>{props.children}</List>
+    <Box width={width} bgcolor={bgcolor}>
+      <List>{children}</List>
     </Box>
   );
 };
