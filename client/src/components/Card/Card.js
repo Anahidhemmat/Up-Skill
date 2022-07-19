@@ -27,7 +27,7 @@ const CardComponent = ({
 }) => {
   return (
     <Box width="300px">
-      <Card varianr={variant}>
+      <Card varianr={variant} data-testid="card">
         {img ? (
           <CardMedia image={image} component="img" height={height} alt={alt} />
         ) : null}
