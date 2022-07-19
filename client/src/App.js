@@ -7,6 +7,7 @@ import ListItemComponent from "./components/ListItem";
 import NavbarComponent from "./components/Navbar/Navbar";
 import { Contained, Outlined, Text } from "./components/Button/Button.stories";
 import { OutlinedInput } from "./components/Input/Input.stories";
+import LinkComponent from "./components/Link/LinkCom";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ To ignore, add // eslint-disable-next-line to the line before."
       </ListComponent>
       <Contained>Story</Contained>
       <OutlinedInput label="name" />
+      <LinkComponent>Link</LinkComponent>
     </div>
   );
 }
