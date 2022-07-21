@@ -2,7 +2,6 @@ import "./App.css";
 import ButtonComponent from "./components/Button/Button";
 import CardComponent from "./components/Card/Card";
 import TextFieldComponent from "./components/Input/Input";
-import ListComponent from "./components/List";
 import ListItemComponent from "./components/ListItem/ListItem";
 import NavbarComponent from "./components/Navbar/Navbar";
 import { Contained, Outlined, Text } from "./components/Button/Button.stories";
@@ -25,10 +24,10 @@ To ignore, add // eslint-disable-next-line to the line before."
         src="https://source.unsplash.com/random"
         alt="unsplash img"
       />
-      <ListComponent width="400px" bgcolor="#efefef">
+      {/* <ListComponent width="400px" bgcolor="#efefef">
         <ListItemComponent primary="List Item" secondary="secondary text" />
         <ListItemComponent primary="second Item" secondary="secondary text" />
-      </ListComponent>
+      </ListComponent> */}
       <Contained>Story</Contained>
       <OutlinedInput label="name" />
       <LinkComponent>Link</LinkComponent>
