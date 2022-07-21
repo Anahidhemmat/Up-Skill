@@ -39,3 +39,9 @@ it("should have type attribute", async () => {
   const buttonElement = screen.getByRole("button");
   expect(buttonElement).toHaveAttribute("type", "button");
 });
+
+it("should have props", async () => {
+  render(<ButtonComponent variant="text" color="warning" size="small" />);
+  const buttonElement = screen.getByRole("button");
+  expect(buttonElement).toBeTruthy();
+});
