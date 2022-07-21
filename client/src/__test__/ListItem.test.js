@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ListItemComponent from "../ListItem";
+import ListItemComponent from "../components/ListItem/ListItem";
 
 it("should render list component", async () => {
   render(<ListItemComponent />);

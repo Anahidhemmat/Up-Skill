@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import TextFieldComponent from "../Input";
+import TextFieldComponent from "../components/Input/Input";
 
 describe("should have props", () => {
   it("should render textbox", async () => {

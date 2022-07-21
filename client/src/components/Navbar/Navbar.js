@@ -3,6 +3,7 @@ import NavItem from "../NavItem/NavItem";
 import { AppBar, Toolbar, IconButton, Typography, Stack } from "@mui/material";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 import PropTypes from "prop-types";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
 
 const NavbarComponent = ({ color = "inherit", logo = "POKEMON APP" }) => {
   return (

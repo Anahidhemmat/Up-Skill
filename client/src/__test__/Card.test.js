@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import CardComponent from "../Card";
+import CardComponent from "../components/Card/Card";
 
 describe("should render component", () => {
   it("should render component", async () => {

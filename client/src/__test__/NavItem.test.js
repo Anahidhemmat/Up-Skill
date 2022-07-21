@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import NavItem from "../NavItem";
+import NavItem from "../components/NavItem/NavItem";
 
 it("should render nav item", async () => {
   render(<NavItem title="navItem" />);
