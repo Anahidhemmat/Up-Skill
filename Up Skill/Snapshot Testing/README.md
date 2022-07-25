@@ -13,7 +13,9 @@
 1. Wheen we run the test it will check for each component:
    - if it has any snapshot
    - if it does not have snapshot then it will save the current state of the component as it's new snapshot and simply pass the test.
-2. If it does have snapshot then it will run a different algorithm with our existing snapshot and for our new snapshot : if the existing snapshot and the new snapshot matches then we pass the test otherwise we simply fail the test and explain where it has a difference
+2. If it does have snapshot then it will run a different algorithm with our existing snapshot and for our new snapshot : if the existing snapshot and the new snapshot matches then we pass the test otherwise we simply fail the test and explain where it has a difference.
+
+![flowchart](Screen%20Shot%202022-07-25%20at%203.58.38%20PM.png)
 
 ---
 
