@@ -1,43 +1,30 @@
 import React from "react";
-import NavItem from "../NavItem/NavItem";
-import { AppBar, Toolbar, IconButton, Typography, Stack } from "@mui/material";
-import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
-import PropTypes from "prop-types";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import AdbIcon from "@mui/icons-material/Adb";
+import ButtonComponent from "../Button/Button";
 
-const NavbarComponent = ({ color = "inherit", logo = "POKEMON APP" }) => {
+const Navbar = () => {
   return (
-    <div>
-      <AppBar position="static" color={color}>
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="logo"
-          >
-            <CatchingPokemonIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {logo}
-          </Typography>
-          <Stack direction="row" spacing={2}></Stack>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar>
+      <Toolbar>
+        <Box flexGrow={1}>Logo</Box>
+        <ButtonComponent type="button" variant="text">
+          <MenuIcon />
+        </ButtonComponent>
+      </Toolbar>
+    </AppBar>
   );
 };
 
-NavbarComponent.propTypes = {
-  color: PropTypes.oneOf([
-    "inherit",
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "info",
-    "warning",
-  ]),
-};
-
-export default NavbarComponent;
+export default Navbar;
