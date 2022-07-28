@@ -25,3 +25,14 @@ React + Redux:
 3. A **reducer** which actually carries out the state transition depending on the action.
 
 ![Three Core Concepts](Screen%20Shot%202022-07-27%20at%207.58.44%20PM.png);
+
+## `Three Priciples`
+
+1. Maintain our application state in a single object which would be managed by the redux store.
+
+2. To update the state of your app, you need to let redux know about that with an action. you are not allowed to directly update the state object.
+
+3. To specify how the state tree is transformed by actions, you write pure reducers.
+   Reducer - (previous, action) => newState
+
+![three priciples](Screen%20Shot%202022-07-28%20at%203.37.20%20PM.png);
