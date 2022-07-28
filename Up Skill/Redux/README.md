@@ -26,6 +26,8 @@ React + Redux:
 
 ![Three Core Concepts](Screen%20Shot%202022-07-27%20at%207.58.44%20PM.png);
 
+---
+
 ## `Three Priciples`
 
 1. Maintain our application state in a single object which would be managed by the redux store.
@@ -36,3 +38,37 @@ React + Redux:
    Reducer - (previous, action) => newState
 
 ![three priciples](Screen%20Shot%202022-07-28%20at%203.37.20%20PM.png);
+
+---
+
+### `Actions`
+
+1. The only way your application can interact with the store.
+
+2. Actions carry some information from your app to the redux store.
+
+3. Actions are plain javascript objects.
+
+4. They must have a type property that inicates the type of action being performed.
+
+5. A type propertyis typically defined as string constants.
+
+- an action is an object with type propery:
+
+```Javascript
+{
+    type: BUY_CAKE,
+    info: "first redux action"
+}
+```
+
+- an action creator is a function that returns an action:
+
+```Javascript
+function buyCake() {
+    return {
+    type: BUY_CAKE,
+    info: "first redux action"
+}
+}
+```
