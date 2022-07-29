@@ -116,3 +116,61 @@ const reducer = (state = initialState, action) => {
 }
 
 ```
+
+---
+
+### `Redux Store`
+
+- We will always have just one store.
+- The redux store has couple of responsibilities:
+
+  1. Holds application state
+  2. Allows access to state via **getState()**
+  3. Allows state to be updated via **dispatch(action)**
+  4. Register listeners via **subscribe(listener)**
+  5. Handles unredistering of listeners via the function returned by **subscribe(listener)**
+
+  ```Javascript
+  const redux = require('redux');
+  const createStore = redux.createStore;
+
+  const BUY_CAKE = "BUY_CAKE";
+
+    function buyCake() {
+        return {
+        type: BUY_CAKE,
+        info: "first redux action"
+     }
+    }
+
+    const initialState = {
+        numOfCakes: 10,
+    }
+
+    const reducer = (state = initialState, action) => {
+        switch(action.type) {
+            case BUY_CAKE:
+                return {
+                    ...state,
+                numOfCakes: state.numOfCakes - 1
+                }
+            default:
+            return state
+        }
+    }
+    // holding the app state
+    const store = createStore(reducer);
+    //acces to initial state
+    store.getState();
+    //register listeners
+    store.subscribe(() => store.getState());
+    const unsubscribe = store.subscribe(() => store.getState());
+    //allows state to be updated
+    store.dispatch(buyCake());
+    store.dispatch(buyCake());
+    store.dispatch(buyCake());
+    //unsubscribe from the store
+    unsubscribe();
+
+
+  ```
