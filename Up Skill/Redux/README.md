@@ -53,22 +53,66 @@ React + Redux:
 
 5. A type propertyis typically defined as string constants.
 
-- an action is an object with type propery:
+- an **action** is an object with type propery:
 
 ```Javascript
+const BUY_CAKE = "BUY_CAKE";
 {
     type: BUY_CAKE,
     info: "first redux action"
 }
 ```
 
-- an action creator is a function that returns an action:
+- an **action creator** is a function that returns an action:
 
 ```Javascript
+const BUY_CAKE = "BUY_CAKE";
+
 function buyCake() {
     return {
     type: BUY_CAKE,
     info: "first redux action"
+  }
 }
+```
+
+---
+
+### `Reducers`
+
+1. Reducers specify how the app's state changes in response to actions sent to the store.
+
+2. Reducers are functions that accept state and action as an arguments, and returns the next state of the application.
+
+```Javascript
+const BUY_CAKE = "BUY_CAKE";
+
+function buyCake() {
+    return {
+    type: BUY_CAKE,
+    info: "first redux action"
+  }
 }
+
+// (previousState, action) => newState;
+
+const initialState = {
+    numOfCakes: 10,
+}
+
+const reducer = (state = initialState, action) => {
+    switch(action.type) {
+        case BUY_CAKE:
+            // we are not mutating a state object, we return a new object
+            return {
+                //make a copy of state object
+                ...state,
+                //update value
+               numOfCakes: state.numOfCakes - 1
+            }
+        default:
+           return state
+    }
+}
+
 ```
