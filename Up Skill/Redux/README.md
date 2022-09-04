@@ -347,3 +347,82 @@ const BUY_ICECREAM = "BUY_ICECREAM";
   store.dispatch(buyIcecreame());
   unsubscribe();
 ```
+***
+
+### `Middleware`
+
+- is the suggested way to extend Redux with custom functionality(Redux with extra features)
+-  Provides a third-party extension point between dispatching an action and the moment it reaches the reducer
+
+- u can use middleware for logging, crash reporting, performing async tasks ect
+
+**Redux Logger** is a middleware:
+- install middleware
+```
+npm install redux-logger
+```
+- apply middleware:
+```Javascript
+const redux = require('redux');
+const reduxLogger = require("redux-logger");
+
+const createStore = redux.createStore;
+const combineReducers = redux.combineReducers;
+const applyMiddleware = redux.applyMiddleware;
+const logger = reduxLogger.createLogger();
+
+const BUY_CAKE = "BUY_CAKE";
+const BUY_ICECREAM = "BUY_ICECREAM";
+
+  function buyCake() {
+      return {
+      type: BUY_CAKE,
+      info: "first redux action"
+   }
+  }
+  function buyIcecream() {
+      return {
+          type: BUY_ICECREAM,
+      }
+  }
+
+  const initialCakeState = {
+      numOfCakes: 10,
+  }
+  const initialIcecreameState = {
+      numOfIcecreames: 20,
+  }
+  const cakeReducer = (state = initialCakeState, action) => {
+      switch(action.type) {
+          case BUY_CAKE:
+              return {
+                  ...state,
+              numOfCakes: state.numOfCakes - 1
+              }
+          default:
+          return state
+      }
+  }
+
+  const icecreameReducer = (state = initialIcecreameState, action) => {
+      switch(action.type) {
+          case BUY_ICECREAM:
+              return {
+                   ...state,
+              numOfIcecreames: state.numOfIcecreames - 1
+              }
+          default:
+          return state
+      }
+  }
+  const rootReducer = combineReducers({
+      cake: cakeReducer,
+      icecreame: icecreamReducer,
+  })
+  const store = createStore(reducer, applyMiddleware(logger));
+  store.getState();
+  const unsubscribe = store.subscribe(() => {});
+  store.dispatch(buyCake());
+  store.dispatch(buyIcecreame());
+  unsubscribe();
+```
