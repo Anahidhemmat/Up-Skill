@@ -51,3 +51,17 @@
 
 - Every host has two name servers/dns.
 - You have to store Ns in domain.
+
+---
+
+## What is `Wordpress` ?
+
+- At its core, WordPress is the simplest, most popular way to create your own website or blog.
+
+## What is `Database`?
+
+- A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).
+
+## What is `File Manager` ?
+
+- File Manager is a quick and easy way to navigate through your files. It also has an array of features that can help you to manage your files, such as uploading, creating, removing, editing, copying, moving, compressing, or extracting your files.
